@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Selector</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- 공통적인 테마를 지정해 놓고 여러개의 테마에 동시에 지정하기 위한 방법-->
+    <!-- P {}: P태그가 있으면 그 모든 p 태그에 현재의 디자인을 지정하겠다 -->
+    <style>
+        
+        p {
+            
+            font-size: 50px;
+            color:darksalmon;
+            font-weight: 1000;
+            font-style: italic;
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 바로 아래와 같은 것은 사용을 권장하지 않는다.-->
+    <p><font color="green" size="30px" >우리나라만세</font></p>
+    <!--이와 같은 형식으로 사용할 것을 권장한다.-->
+    <!-- inline방식 -->
+    <p style="font-size: 1.2rem; color: deeppink;">잠이온다</p>
+    <p>Republic of Korea</p>
+    <p>정보처리기사</p>
+    <p>오늘이 접수일</p>
+</body>
+</html>
