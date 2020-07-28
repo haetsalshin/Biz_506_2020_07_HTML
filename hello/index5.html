@@ -1,0 +1,102 @@
+<!-- 주석문을 넣을 수 있다.-->
+<!-- 이 문서는 HTML5 규격의 Hyper Text 문서다-->
+<!DOCTYPE HTML>
+<html lang="ko">
+    <!-- head tag에 작성되는 내용은 사용자에게 보여지지 않고
+    문서의 특성등을 지정하는 여러가지 설정 값을 포함한다.
+    -->
+    <head>
+        <!-- web Browser에 보여질 제목 -->
+        <title>여기는 문서의 제목입니다.</title>
+        <!-- 문자 encoding 설정-->
+        <meta charset="UTF-8">
+        <!-- content='width=device-width, initial-scale=1' : 지금 보여주는 웹페이지의 화면은 실제로
+        각 장치가 지원되는 width랑 맞춰라. 그리고 scale 1:1로 맞춰라. 이걸 해두지 않으면 우리가 스마트폰으로 보면
+        글씨가 매우 작게 나타나게 된다. 그래서 화면을 늘리지 않으면 확인하지 못할정도가 된다.
+        그래서 html에는 title, meta charset, meta name 이 세가지는 최소한 꼭 만들어줘야 한다.
+        
+        이런식으로 만드는 것을 반응형 웹라고 말한다.
+        -->
+
+        <!-- 화면에 보여지는 scale 조정 -->
+        <meta name="viewport" content='width=device-width, initial-scale=1'>
+    </head>
+    
+    <body>
+        <!-- h1 
+            h : headLine, 제목을 표시하는 방법
+            ( 1~ 6까지값으로 표현가능하고 숫자가 커질수록 크기가 작아진다.)-->
+        <h1>나의 홈페이지</h1>
+        <h2>나의 홈페이지</h2>
+        <h3>나의 홈페이지</h3>
+        <h4>나의 홈페이지</h4>
+        <h5>나의 홈페이지</h5>
+        <h6>나의 홈페이지</h6>
+        <!-- h7은 없기 때문에 얘가 인식 못해서 일반 문자열로 나타난다.-->
+        <h7>나의 홈페이지</h7>
+        <!-- tag로 감싸지 않으면 무조건 한줄로 나타나게 된다. -->
+        <!-- Auto Wrap : web에서 보면 글자수 키우면 자동 줄바꿈이 된다.
+        한 문단이기 때문에 줄간격이 좁다.
+        -->
+
+        <!-- br태그는 한 문단 내에서 줄바꿈을 해주는 tag <br/>,</br>, <br> 이 셋 중 하나만 써도 되고 꼭 닫아주지 않아도 된다.-->
+        <p>우리는 오늘 HTML5를 사용하여 웹페이지를 만들고 있다<br/>
+        우리가 만드는 웹페이지는 다양한 웹브라우저에서 정상으로 보여지기를 기대한다</p>
+        <!-- 강제 Wrap 문단 자체가 다르기 때문에 줄간격이 넓다.-->
+        <!-- p태그 안 닫아도 되지만 성능을 위해서 가급적 닫아줘라. -->
+        <p>우리나라 만세</p>
+        <p>대한민국 만세</p>
+        <!-- 태그 안에 속성값 넣기-->
+        <!-- a(anchor) tag , 링크라고 하며 문자열을 마우스로 클릭했을 떄 서버에 요청(request)을 보내라-->
+        <!-- anchor(닻) : 주소값을 넣어주면 클릭시 그 주소로 화면을 바꿔주는 것.-->
+
+        <!-- 속성(변수) : "" 이렇게 된 형식들-->
+        <!--  target="_new" 해당 링크를 눌렀을 때 새창으로 열려라.-->
+        <p><a href="https://naver.com" target="_new">네이버 바로가기</a></p>
+        <p><a href="https://naver.com" target="_my">네이버 바로가기</a></p>
+        <p><a href="sub/index6.html">sub의 index6열기</a></p>
+        <!-- src : 소스 -->
+        <!-- 시각장애인들을 위하여 요즘에는 alt태그를 이렇게 붙여주는 추세이다.-->
+        <p><img src="2-learn-to-swim.jpg" alt="2020 이미지" width="200px" height="120px"></p>
+        <p><img src="https://cdn.eyesmag.com/content/uploads/posts/2019/12/31/change-2020-top50main-b74c4b38-1b44-4a93-8da3-5b2158138763.gif" width="200px"></p>
+        <p>
+            <!-- 그림을 누르면 해당 화면으로 갈 수 있도록 만들 수 있다.-->
+            <!-- a tag의 href : Hyper Text Reference -->
+            <a href="https://daum.net">
+                <img src="unnamed.png" alt="2020 이미지" width="100px" >
+            </a>
+        </p>
+            <ul>
+                <!-- li*5 하면 태그 5개 만들어진다.-->
+                <!-- 
+                    vsCode에서 Ctrl+ Alt + Shift + 방향키 : 블럭 다중 선택
+                        이렇게 해서 한번에 입력도 가능하다.
+                -->
+                <!-- li : 리스트를 만드는 tag -->
+                <li>ul : UnOrder List, 순서가 없는 리스트</li>
+                <li>머릿글이 기호로 표시되는 리스트</li>
+                <li>머릿글 기호는 필요에 따라 바꿀 수 있다</li>
+
+            </ul>
+        </p>
+
+        </p>
+            <ol>
+                <li>ol : Order List, 순서값이 있는 리스트</li>
+                <li>머릿글이 순번이 매겨진 리스트</li>
+                <li>기본값은 숫자 리스트, 가다가 또는 ABC등으로 바꿀 수 있다</li>
+
+            </ol>  
+        </p>
+
+
+        </p>
+            <ul>
+                <!-- Ctrl + D : 여러개의 단어(블럭) 중복 선택 가능 (하나 선택후 ctrl+d,  다른 블럭 가서 또 ctrl+d) -->
+                <li><img src="2-learn-to-swim.jpg" alt="수영" width="50px"></li>
+                <li><img src="2-learn-to-swim.jpg" alt="수영 이미지" width="50px"></li>
+                <li><img src="2-learn-to-swim.jpg" alt="수영 이미지다" width="50px"></li>
+            </ul>  
+        </p>    
+    </body>
+</html>
