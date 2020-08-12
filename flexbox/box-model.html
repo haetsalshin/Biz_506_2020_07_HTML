@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        /*
+            * : DC에 있는 모든 요소에 공통된 style을 적용하라!
+        */
+        *{
+            /*box size를 기준으로 안쪽으로 border-size를 늘리겠다*/
+            /*box-sizing: content-box; 이게 원래 디폴트 값
+            
+                box의 border size의 크기를 임의로 설정할 떄
+                box의 크기가 변하는데
+                무엇을 기준으로 변화 시키겠느냐
+            
+            */
+            box-sizing: border-box;
+            /*
+                layout을 작성하다 보면 margin, padding이 원하는 값으로
+                설정이 안되는 경우가 간혹 있다.
+                이러한 현상을 막기 위해서 
+                모든 DOC요소의 margin, padding을 초기화 한다.
+            */
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section{
+            width: 90%;
+            height: 50%;
+            border: 1px dashed darksalmon;
+        }
+        
+        section div{
+            border: 1px solid deeppink;
+            width: 50%;
+            margin: 10px auto;
+        }
+        /*
+            div 엘리먼트들 중에서 첫번째 요소에 대하여...
+
+        */
+        section div:nth-child(1){
+            border: 5px solid maroon;
+        }
+
+        section div:nth-child(2){
+            border: 10px solid orange;
+        }
+        /* section div:nth-child(2)랑 비교해보면 border가 기준box보다 바깥으로 
+        그려진 것을 확인 할 수 있다*/
+        section div:nth-child(3){
+            border: 10px solid orange;
+            box-sizing: content-box;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div>div1</div>
+        <div>div2</div>
+        <div>div3</div>
+        <div>div4</div>
+        <div>div5</div>
+
+    </section>
+</body>
+</html>
