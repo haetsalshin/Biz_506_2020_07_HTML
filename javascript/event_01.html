@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+</head>
+<body>
+    <input id="input1"><br/>
+    <!-- 
+        웹 브라우저는 이 태그를 지나는 순간 웹 브라우저 어딘가에 onclick이라는 것을
+        누군가가 웹 브라우저에 있는 클릭이라는 버튼을 누르는 순간
+        하단의 자바스크립트 함수를 실행하도록 등록을 한다
+
+        스크립트에 만들어 놓은 myclick이라는 함수를 실행하도록 어딘가에 정보를 등록해놓는다
+        대기를 하고 있다가 우리가 마우스를 클릭하는 순간 웹브라우저(운영체제)가 
+        그 행동을 감지하고 브라우저에 혹시 방금 버튼을 누가 클릭 했는데 그 클릭하는 함수가 등록되어 있는지
+        물어본다. 우리가 등록해 놓았기 때문에 해당 함수를 실행시켜서 alert글을 띄워준다.
+
+        event driven?방식
+     -->
+    
+    <button onclick="myclick()">클릭</button>
+    <script>
+        // 쌤) Fuction(함수) 밖에 있는 script는
+        // Browser가 시작, 새로고침 되는 순간에 실행이 되고
+        
+        alert("시작")    
+        // 쌤) Function(함수)로 감싸진 코드는 함수(myclick())를 호출하는 시점에서
+        // 코드가 실행이 된다.
+        // function : Js mehtod를 생성하는 키워드
+
+        // 버튼은 form으로 감쌌을 때만 서버로 보낼 수 있다.
+        // 여기는 form으로 감싸지 않았다.
+
+        // 기다리지 않고 있다가 클릭을 하면 뭔가 실행을 시키는 구조
+        // 이런 것을 multy thread, multy tasking 이라고 한다.
+        // 컴퓨터는 우리가 클릭 할 때까지 마냥 기다릴 수 없기 때문에 특별한 기능을 부여하는데
+        // event라는 것을 붙여놓아(일상적이지 않은 것) 
+        // 개발자가 원하는 특별한 행동을 하도록 만든다.
+
+        // 모든 button에는 event들이 등록되어 있다.
+        // a herf 태그 또한 click event가 자동으로 등록되어 있는 것이며, 우리가 원한다면
+        // 임의의 다른 함수를 등록해서 사용할 수 있다.
+        function myclick() {
+            // alert : 화면에 팝업 띄워서 어떤 정보를 알리는 것
+            // id가 input인 input box에 입력한 값(value)을 가져와서 data에 저장
+            var data = document.getElementById("input1").textContent
+            alert("환영합니다")
+            alert("입력한 값은 :" + data)
+        }
+
+
+    </script>
+</body>
+</html>
