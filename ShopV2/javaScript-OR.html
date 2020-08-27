@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // jquery를 이용하지 않고 자바 스크립트만을 이용한 이벤트 "DOMContentLoaded"
+      // $(function(){}) 과 같은 효과
+      document.addEventListener("DOMContentLoaded", function () {
+        let title1; // undifined : 변수를 선언하고 초기화 하지 않았을 때 기본 설정
+        let title2 = null;
+        let title3 = ""; // null 과 매우 유사한 문자열 초기화 값
+        let title4 = NaN; // Not a Number : 어떤 변수에 담기 문자열이 숫자로 변환 가능하냐?
+        let title5 = 0;
+        let title6 = 123;
+        let msg = "대한민국";
+        if (title1 != undefined) {
+          msg = title1;
+        }
+        if (title2 != null) {
+          msg = title2;
+        }
+        if (title3 != "") {
+          msg = title3;
+        }
+        if (title4 != NaN) {
+          msg = title4;
+        }
+        if (title5 != 0) {
+          msg = title5;
+        }
+        if (title6 != 0) {
+          msg = title6;
+        }
+
+        // $("#msg") id가 msg가 되어 있는 친구에 "여기는 메세지가 표시될 영역"문자열 대신
+        // msg에 포함된 변수를 보여줘라
+        document.querySelector("#msg").innerHTML = msg;
+      });
+    </script>
+  </head>
+  <body>
+    <h3 id="msg">여기는 메세지가 표시될 영역</h3>
+  </body>
+</html>
