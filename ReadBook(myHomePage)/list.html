@@ -86,44 +86,10 @@
         display: none;
       }
 
-      @media (max-width: 768px) {
-        div.toggel {
-          /*768px보다 작아지면 toggle div box를 보여라*/
-          display: block;
-        }
-        ul {
-          width: 100%;
-          display: none;
-        }
-
-        ul li {
-          display: block;
-          text-align: center;
-          color: gray;
-        }
-        ul li:hover {
-          background-color: gray;
-        }
-        .active {
-          display: block;
-        }
+      nav#homepage-list ul li:nth-child(4) {
+        margin-left: auto;
       }
     </style>
-    <script>
-      $(function () {
-        /*
-                  햄버거(샌드위치 버튼)을 클릭했을 때 반응하기
-                  ul tag에 active 클래스를 적용, 비적용하여 보이게, 보이지 않게
-                  처리하는 코드
-  
-                  이렇게 만들면 pc와 모바일 둘 다 에서 사용 할 수 있다.
-                  pc에서는 가로방향, 모바일에서는
-              */
-        $(".menu").click(function () {
-          $("ul").toggleClass("active");
-        });
-      });
-    </script>
   </head>
 
   <header>
@@ -132,14 +98,14 @@
   </header>
   <body>
     <nav id="homepage-list">
-      <div class="toggle">
-        <i class="fas fa-bars menu"></i>
-      </div>
       <ul>
         <li>home</li>
-        <li>Search Service</li>
+        <li>도서정보서비스</li>
+        <li>길찾기서비스</li>
         <li>회원가입</li>
         <li>로그인</li>
+        <li>마이페이지</li>
+        <li>로그아웃</li>
       </ul>
     </nav>
     <section>body</section>
