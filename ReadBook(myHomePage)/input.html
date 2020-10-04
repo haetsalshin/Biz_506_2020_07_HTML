@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        
+    
+    </script>
+    <style>
+          * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+          }
+          body,
+          html { 
+            padding: 20px;
+            margin: 0 auto;
+            width: 60%;
+          }
+          section#section-write {
+            background-color: rgb(245, 219, 227);
+            padding: 20px;
+          }
+          legend {
+            background-color: indianred;
+            color: white;
+            padding: 8px;
+            margin: 8px auto;
+            text-align: center;
+          }
+          label {
+          }
+          .io {
+            display: inline-block;
+            margin: 0;
+          }
+          input {
+            width: 90%;
+            padding: 10px;
+            margin: 2px auto;
+          }
+          section#section-btn {
+            display: inline-block;
+          }
+          section#section-btn button {
+            background-color: indianred;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            align-items: right;
+            padding: 5px 8px;
+            margin: 8px auto;
+          }
+        </style>
+  </head>
+  <body>
+
+    <section id="section-write">
+        <form id="ios" modelAttribute="IoListVO">
+         <legend>📄 매입매출 입력 📄</legend>
+         <div>
+           <label><input path="io_date" type="date" /></label>
+         </div>
+         <div>
+           <label><input path="io_time" type="time" placeholder="시각" /></label>
+         </div>
+         <div>
+           <label><input path="io_pname" placeholder="상품명" /></label>
+         </div>
+         <secton id="section-inout">
+           <div>
+             <label class="io"
+               ><input path="io_input" type="radio"  value="1" />매입</label
+             >
+           </div>
+           <div>
+             <label class="io"
+               ><input path="io_input" type="radio" value="2" />매출</label
+             >
+           </div>
+          <button onlcik="radio_chk();">라디오 값 확인</button>
+         </secton>
+         <div>
+           <label><input path="io_quan" type="number" placeholder="수량" /></label>
+         </div>
+       </section>
+       <section id="section-btn">
+         <div>
+           <button>처음으로</button>
+           <button type="submit">입력완료</button>
+         </div>
+       </section>
+   </form>
+  </body>
+</html>

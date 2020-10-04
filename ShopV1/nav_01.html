@@ -52,6 +52,35 @@
         /* 기본화면(pc용 view port)에서는 현재 div box를 감추어라*/
         display: none;
       }
+
+      #login_body form {
+        width: 400px;
+        padding: 40px;
+        background-color: #191919;
+        text-align: center;
+        opacity: 0.8;
+        /*
+        body를 기준으로 box의 왼쪽 꼭지점 좌표를 설정하고
+        위에서 50%위치, 왼쪽에서 50%위치로 지정하고
+        다시 현재 박스의 width 50%만큼을 왼쪽으로 이동하고
+        box의 height의 50% 만큼을 위로 (-50%) 이동
+*/
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 100;
+
+        transform: translate(-50%, -50%);
+
+        border-radius: 20px;
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+
+        -webkit-animation-name: login_box_top_down;
+        -webkit-animation-duration: 0.8s;
+
+        -moz-animation-name: login_box_top_down;
+        -moz-animation-duration: 0.8s;
+      }
       /*view port화면의 width가 768px보다 작아지면 적용할 css */
       /* 반응형 웹 만들기*/
       @media (max-width: 768px) {

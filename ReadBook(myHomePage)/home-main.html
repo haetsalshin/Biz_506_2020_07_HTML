@@ -4,13 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- jqeury 링크 -->
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <!-- font awesome 링크-->
-    <script
-      src="https://kit.fontawesome.com/45b24f3187.js"
-      crossorigin="anonymous"
-    ></script>
+
     <style>
       * {
         box-sizing: border-box;
@@ -36,7 +30,7 @@
         padding: 1.5rem;
 
         background-image: url(photo-1595675024853-0f3ec9098ac7.jpg);
-        opacity: 0.92;
+        opacity: 0.9;
         background-repeat: no-repeat;
         background-position: center;
 
@@ -55,13 +49,18 @@
 
       nav#homepage-list {
         width: 100%;
-        height: 50px;
+        height: 60px;
         background-color: black;
       }
-
+      #homepage-list{
+        border-radius: 5px;
+      }
       ul {
         width: 100%;
         margin: 0 auto;
+        display: flex;
+        border-bottom: transparent;
+        b
       }
       ul li {
         list-style-type: none;
@@ -71,7 +70,8 @@
       }
 
       ul li:hover {
-        color: gray;
+        background-color: rgba(128, 128, 128, 0.6);
+        color: white;
         cursor: pointer;
       }
 
@@ -89,26 +89,34 @@
       nav#homepage-list ul li:nth-child(4) {
         margin-left: auto;
       }
+      footer {
+        background-color: black;
+        text-align: center;
+        color: white;
+      }
     </style>
   </head>
 
   <header>
-    <h1>ReadBook Service V1</h1>
+    <div class="class-nav">
+      <nav id="homepage-list">
+        <ul>
+          <li>home</li>
+          <li>도서정보서비스</li>
+          <li>길찾기서비스</li>
+
+          <li>회원가입</li>
+          <li>마이페이지</li>
+          <li>로그인</li>
+          <li>로그아웃</li>
+        </ul>
+      </nav>
+    </div>
+    <h1>Short Navi Service V1</h1>
     <p>서비스에 오신 것을 환영합니다</p>
+    <p>로그인을 먼저 해주세요</p>
   </header>
   <body>
-    <nav id="homepage-list">
-      <ul>
-        <li>home</li>
-        <li>도서정보서비스</li>
-        <li>길찾기서비스</li>
-        <li>회원가입</li>
-        <li>로그인</li>
-        <li>마이페이지</li>
-        <li>로그아웃</li>
-      </ul>
-    </nav>
-    <section>body</section>
     <footer>
       <address>CopyRight &copy; sinsin09022@gmail.com</address>
     </footer>

@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>얼렁뚱땅 블로그</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-        header{
-            border: 1px solid red;
-            text-align: center;
-            padding: 1.5rem;
+      header {
+        border: 1px solid red;
+        text-align: center;
+        padding: 1.5rem;
 
-            background-image: url("images/우주2.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
+        background-image: url("images/우주2.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
 
-            background-size: 100% 100%;
-            
+        background-size: 100% 100%;
 
-            color: white;
-            
-        }
-        #button{
-            
-            text-align: right;
-        }
-        /*
+        color: white;
+      }
+      #button {
+        text-align: right;
+      }
+      /*
             id값이 button으로 설정된 box에 소속되어 있는 button tag에만
             style을 지정하자
         */
-        #button button{
-            background-color: rgb(15, 13, 116);
-            color: white;
-            /* 
+      #button button {
+        background-color: rgb(15, 13, 116);
+        color: white;
+        /* 
                 padding, margin 에서많이 사용하는 단위
                 rem : 내부의 text 크기를 1로 하여 비례적으로 적용하는 값
                     button의 경우 표준 design guide에서 개정한 값으로 
                 top, buttom : 8px / left, right : 16px
             */
-            padding: 8px;
-            vertical-align: middle;
-            cursor: pointer;
-            /* transparent : 투명색
+        padding: 8px;
+        vertical-align: middle;
+        cursor: pointer;
+        /* transparent : 투명색
                 hover에서 밑줄 효과를 주고자 할 때 
                 화면이 흔들리는 현상을 막기 위하여
                 기본 테두리의 bottom을 투명색으로 같은 두께만큼 지정을 하는 것
             */
 
-            border-bottom: 2px solid transparent;
-            transition: all 1s linear;
-        }
-        #button button:hover{
-            background-color: honeydew;
-            color: black;
-            border-bottom: 2px solid green;
-        }
+        border-bottom: 2px solid transparent;
+        transition: all 1s linear;
+      }
+      #button button:hover {
+        background-color: honeydew;
+        color: black;
+        border-bottom: 2px solid green;
+      }
 
-        /*
+      /*
             margin, padding의 값 지정
             4개의 값 : Top부터 시계방향으로 1개씩 지정
             2개의 값 : Top, Botton그리고 Left, Right
@@ -64,77 +61,74 @@
 
             auto는 바깥 쪽에 감싸고 있는 box의 중앙에 오도록 한다
         */
-        #blog_body{
-            width: 80%;
-            border: 1px solid green;
-            /*
+      #blog_body {
+        width: 80%;
+        border: 1px solid green;
+        /*
                 blog_body box의 top과 botton 여백을 10px로 하고 
                 left, right 여백은 바깥쪽 box 크기를 계산하여
                 같은 값으로 자동 조잘하라 라는 의미
                  == 현재 blog_body를 좌우 중앙에 정렬하는 용도로 많이 쓰인다.
             */
-            margin: 10px auto;
-            background-image: url(images/우주1.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            transition: 2s linear;
-            
-        }
-        #blog_body:hover{
-            background-image: url(images/우주2.jpg);
-        }
-        footer{
-            background-color: rgb(241, 204, 241);
-            text-align: center;
-            padding: 8px;
-        }
-        .blog_title{
-            background-color: teal;
-            padding: 8px;
-        }
+        margin: 10px auto;
+        background-image: url(images/우주1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: 2s linear;
+      }
+      #blog_body:hover {
+        background-image: url(images/우주2.jpg);
+      }
+      footer {
+        background-color: rgb(241, 204, 241);
+        text-align: center;
+        padding: 8px;
+      }
+      .blog_title {
+        background-color: teal;
+        padding: 8px;
+      }
 
-        .blog_title:hover{
-            color: blue;
+      .blog_title:hover {
+        color: blue;
+      }
 
-        }
-
-        .blog_text{
-            padding: 8px;
-        }
-
+      .blog_text {
+        padding: 8px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h3>얼렁뚱땅 블로그 V1</h3>
-        <p>나의 얼렁뚱땅 블로그에 방문해 주신 것을 환영합니다!</p>
+      <h3>얼렁뚱땅 블로그 V1</h3>
+      <p>나의 얼렁뚱땅 블로그에 방문해 주신 것을 환영합니다!</p>
     </header>
     <section id="main">
-        <article id="button">
-            <button>블로그작성</button>
-        </article>
-        <article>
-            <button>
-                나는 Test
-            </button>
-        </article>
-        <!-- 이름명 명명할 때 가급적 _(언더바)로 해주기
+      <article id="button">
+        <button>블로그작성</button>
+      </article>
+      <article>
+        <button>나는 Test</button>
+      </article>
+      <!-- 이름명 명명할 때 가급적 _(언더바)로 해주기
         나중에 자바 스크립으로 넘어가면 -(일반)로 명명했을 때 문제 생길 수도 있다. -->
-        <article id="blog_body">
-            <section class="blog_title">
-                <h4 >오늘은 블로그 시작하는 날</h4>
-               
-            </section>
-            <section class="blog_text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint accusamus exercitationem dolore libero, quaerat quia placeat corporis laudantium nulla sit doloribus obcaecati nesciunt est tenetur. Quod reprehenderit ullam hic ratione.</p>
-            </section>
-        </article>
+      <article id="blog_body">
+        <section class="blog_title">
+          <h4>오늘은 블로그 시작하는 날</h4>
+        </section>
+        <section class="blog_text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+            accusamus exercitationem dolore libero, quaerat quia placeat
+            corporis laudantium nulla sit doloribus obcaecati nesciunt est
+            tenetur. Quod reprehenderit ullam hic ratione.
+          </p>
+        </section>
+      </article>
 
-        <footer>
-            <address>CopyRight &copy; sinsin0902@daum.net</address>
-
-        </footer>
-
+      <footer>
+        <address>CopyRight &copy; sinsin0902@daum.net</address>
+      </footer>
     </section>
-</body>
+  </body>
 </html>
