@@ -64,18 +64,15 @@
       <div>
         <label><input placeholder="상품명" /></label>
       </div>
-      <secton id="section-inout">
-        <div>
-          <label class="io"
-            ><input type="radio" name="inout" value="매입" />매입</label
-          >
-        </div>
-        <div>
-          <label class="io"
-            ><input type="radio" name="inout" value="매출" />매출</label
-          >
-        </div>
-      </secton>
+      <div>
+        <label
+          >매입/매출 구분
+          <select path="io_input" class="flex6">
+            <option value="1">매입</option>
+            <option value="2">매출</option>
+          </select>
+        </label>
+      </div>
       <div>
         <label><input placeholder="단가" /></label>
       </div>
