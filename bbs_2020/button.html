@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: "East Sea Dokdo", cursive;
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+      }
+      #button {
+        padding: 12px 36px;
+        margin: 10px 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 40px;
+        background: linear-gradient(90deg, #0162c8, #55e7fc);
+        border: none;
+        overflow: hidden;
+      }
+      span {
+        position: absolute;
+        background: #fff;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        border-radius: 50%;
+        animation: animate 1s linear infinite;
+      }
+      @keyframes animate {
+        0% {
+          width: 0px;
+          height: 0px;
+          opacity: 0.5;
+        }
+        100% {
+          width: 500px;
+          height: 500px;
+          opacity: 0;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      const buttons = document.querySelectorAll("button");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          let x = e.clientX - e.target.offsetLeft;
+          let y = e.clientY - e.target.offsetTop;
+
+          let ripples = document.createElement("span");
+          ribbles.style.left = x + "px";
+          ribbles.style.top = y + "px";
+          this.appendChild(ripples);
+
+          setTimeOut(() => {
+            ripples.remove();
+          }, 1000);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <button id="button">저장</button>
+    </div>
+  </body>
+</html>
